@@ -1,0 +1,85 @@
+/* src/composants/Home.css */
+
+.wave-emoji {
+  display: inline-block;
+  animation: wave 2.5s infinite;
+  transform-origin: 70% 70%;
+}
+
+@keyframes wave {
+  0% { transform: rotate( 0.0deg) }
+  10% { transform: rotate(14.0deg) }
+  20% { transform: rotate(-8.0deg) }
+  30% { transform: rotate(14.0deg) }
+  40% { transform: rotate(-4.0deg) }
+  50% { transform: rotate(10.0deg) }
+  60% { transform: rotate( 0.0deg) }
+  100% { transform: rotate( 0.0deg) }
+}
+
+.social-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  color: #fff;
+  font-size: 1.2rem;
+  transition: all var(--transition-short);
+}
+
+.social-icon:hover {
+  color: var(--accent-primary);
+  transform: translateY(-3px);
+  text-shadow: var(--glow-mild);
+}
+
+/* Tailwind-ish utility classes for Home since Tailwind is missing */
+.pt-20 { padding-top: 5rem; }
+.min-h-screen { min-height: 100vh; }
+.flex-1 { flex: 1 1 0%; }
+.flex-row { flex-direction: row; }
+.text-left { text-align: left; }
+.text-3xl { font-size: 1.875rem; line-height: 2.25rem; }
+.text-5xl { font-size: 3rem; line-height: 1; }
+.text-2xl { font-size: 1.5rem; line-height: 2rem; }
+.font-bold { font-weight: 700; }
+.font-semibold { font-weight: 600; }
+.mb-4 { margin-bottom: 1rem; }
+.mb-6 { margin-bottom: 1.5rem; }
+.mb-8 { margin-bottom: 2rem; }
+.gap-4 { gap: 1rem; }
+.gap-12 { gap: 3rem; }
+.text-gray-400 { color: #9ca3af; }
+.max-w-\[600px\] { max-width: 600px; }
+.leading-relaxed { line-height: 1.625; }
+.relative { position: relative; }
+.absolute { position: absolute; }
+.inset-0 { top: 0; right: 0; bottom: 0; left: 0; }
+.bg-cyan-400 { background-color: rgba(34, 211, 238, 0.4); } 
+.rounded-full { border-radius: 9999px; }
+.blur-\[80px\] { filter: blur(80px); }
+.opacity-40 { opacity: 0.4; }
+.z-10 { z-index: 10; }
+.w-\[300px\] { width: 300px; }
+.object-contain { object-fit: contain; }
+
+@media (min-width: 1024px) {
+  .lg\:flex-row { flex-direction: row; }
+  .lg\:justify-end { justify-content: flex-end; }
+  .lg\:text-6xl { font-size: 3.75rem; line-height: 1; }
+  .lg\:w-\[450px\] { width: 450px; }
+}
+
+@media (max-width: 1023px) {
+  .hero-content {
+    text-align: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+  }
+  .social-links {
+    justify-content: center;
+  }
+}
