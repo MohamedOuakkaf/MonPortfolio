@@ -70,7 +70,6 @@ function Contact() {
                     value={formData.name}
                     onChange={handleChange}
                     className="form-input"
-                    autoFocus
                     required
                   />
                 </div>
@@ -86,7 +85,6 @@ function Contact() {
                     value={formData.project}
                     onChange={handleChange}
                     className="form-input"
-                    autoFocus
                     required
                   />
                 </div>
@@ -102,7 +100,6 @@ function Contact() {
                     value={formData.email}
                     onChange={handleChange}
                     className="form-input"
-                    autoFocus
                     required
                   />
                 </div>
@@ -118,7 +115,6 @@ function Contact() {
                     value={formData.phone}
                     onChange={handleChange}
                     className="form-input"
-                    autoFocus
                     required
                   />
                 </div>
@@ -134,7 +130,6 @@ function Contact() {
                     value={formData.message}
                     onChange={handleChange}
                     className="form-input textarea"
-                    autoFocus
                     required
                   ></textarea>
                 </div>

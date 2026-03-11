@@ -1,87 +1,68 @@
 .loader-container {
   position: fixed;
-  top:0;
-  left:0;
-  width:100vw;
-  height:100vh;
-  display:flex;
-  flex-direction: column;
-  justify-content: center; /* centre verticalement bloc cercle + texte */
+  inset: 0;
+  background-color: #0d1117;
+  display: flex;
+  justify-content: center;
   align-items: center;
-  font-family:'Segoe UI',sans-serif;
-  z-index:9999;
-  opacity:1;
-  transition: opacity 0.8s ease;
-  overflow:hidden;
-}
-
-.loader-container.fade-out {
-  opacity:0;
+  flex-direction: column;
+  z-index: 9999;
 }
 
 .particles-bg {
-  position:absolute;
-  top:0;
-  left:0;
-  width:100%;
-  height:100%;
-  z-index:1;
+  position: absolute;
+  inset: 0;
+  z-index: 1;
 }
 
-/* Cercle centré */
 .circle-container {
   position: relative;
-  width:150px;
-  height:150px;
-  z-index:2;
+  width: 150px;
+  height: 150px;
+  z-index: 2;
 }
 
 .progress-circle {
-  width:150px;
-  height:150px;
+  width: 100%;
+  height: 100%;
   transform: rotate(-90deg);
 }
 
 .circle-bg {
-  fill:none;
-  stroke: rgba(97,218,251,0.2);
-  stroke-width:10;
+  fill: none;
+  stroke: rgba(255, 255, 255, 0.1);
+  stroke-width: 10;
 }
 
 .circle-progress {
-  fill:none;
-  stroke:#61dafb;
-  stroke-width:10;
+  fill: none;
+  stroke: url(#gradient);
+  stroke-width: 10;
   stroke-linecap: round;
-  stroke-dasharray:283;
-  stroke-dashoffset:283;
-  transition: stroke-dashoffset 0.3s linear;
+  stroke-dasharray: 283;
+  transition: stroke-dashoffset 0.1s linear;
 }
 
-/* Pourcentage dans le cercle */
 .progress-text {
   position: absolute;
-  top:50%;
-  left:50%;
-  transform: translate(-50%,-50%);
-  font-size:1.5rem;
-  font-weight:bold;
-  z-index:2;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #61dafb;
 }
 
-/* Texte juste en dessous du cercle */
+/* TEXTE EN DESSOUS DU CERCLE */
 .dynamic-text-bottom {
-  margin-top:15px; /* espace entre cercle et texte */
-  font-size:1.2rem;
-  font-weight:bold;
-  text-align:center;
-  z-index:2;
+  margin-top: 20px;
+  font-size: 1.2rem;
+  color: #61dafb;
+  font-weight: 600;
+  z-index: 3;
 }
 
-.dynamic-text-bottom .im-text {
-  color:#61dafb;
-}
-
-.dynamic-text-bottom .role-text {
-  color:rgba(255,255,255,0.9);
+.im-text {
+  font-weight: 600;
+  margin-right: 4px;
 }
