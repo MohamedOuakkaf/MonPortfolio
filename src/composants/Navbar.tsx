@@ -42,7 +42,7 @@ const Navbar = () => {
         {/* LOGO */}
         <div className="logo">
           <img src={logo} alt="logo" />
-          <span>Portfolio</span>
+
         </div>
 
         {/* MOBILE ICON */}

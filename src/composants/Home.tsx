@@ -1,10 +1,14 @@
 import { useEffect, useRef, useState } from 'react';
-import { FaLinkedinIn, FaFacebookF, FaInstagram, FaWhatsapp, FaEnvelope } from 'react-icons/fa';
+import { FaLinkedinIn, FaGithub, FaInstagram, FaWhatsapp, FaEnvelope } from 'react-icons/fa';
 import './Home.css';
 
 const roles = ['Fullstack Developer', 'Cloud Specialist', 'Network Engineer', 'DevOps Engineer', 'Cybersecurity Expert'];
 
-function Home() {
+interface HomeProps {
+  navigateTo: (section: string) => void;
+}
+
+function Home({ navigateTo }: HomeProps) {
   const [roleIndex, setRoleIndex] = useState(0);
   const [displayed, setDisplayed] = useState('');
   const [deleting, setDeleting] = useState(false);
@@ -122,10 +126,10 @@ function Home() {
 
   const socials = [
     { icon: <FaLinkedinIn />, href: '#', label: 'LinkedIn',  color: '#0a66c2' },
-    { icon: <FaFacebookF />, href: '#', label: 'Facebook',  color: '#1877f2' },
-    { icon: <FaInstagram />, href: '#', label: 'Instagram', color: '#e1306c' },
-    { icon: <FaWhatsapp />,  href: '#', label: 'WhatsApp',  color: '#25d366' },
-    { icon: <FaEnvelope />,  href: '#', label: 'Email',     color: '#00e5ff' },
+    { icon: <FaGithub />,     href: '#', label: 'GitHub',    color: '#333333' },
+    { icon: <FaInstagram />,  href: '#', label: 'Instagram', color: '#e1306c' },
+    { icon: <FaWhatsapp />,   href: '#', label: 'WhatsApp',  color: '#25d366' },
+    { icon: <FaEnvelope />,   href: '#', label: 'Email',     color: '#00e5ff' },
   ];
 
   return (
@@ -170,12 +174,15 @@ function Home() {
             ))}
           </div>
           <div className="home-ctas">
-            <a href="#contact" className="home-btn home-btn--primary">
-              <span>Contact Me</span>
+            <button
+              className="home-btn home-btn--primary"
+              onClick={() => navigateTo('about')}
+            >
+              <span>About Me</span>
               <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
                 <path d="M1 7h12M7 1l6 6-6 6" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"/>
               </svg>
-            </a>
+            </button>
             <a href="#projects" className="home-btn home-btn--outline">
               <span>View Projects</span>
             </a>
